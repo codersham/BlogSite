@@ -33,7 +33,7 @@ blog_details = (req,res) =>{
     .then((result)=>{
         res.render('blogs/details',{title: 'Blog Details', blog: result})
     })
-    .catch((err)=> console.log(err))
+    .catch((err)=> res.status(400).render('404',{title: '404'}))
 }
 
 
